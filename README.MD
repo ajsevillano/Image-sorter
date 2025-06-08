@@ -17,6 +17,7 @@ This Python script copies images from a source folder to a destination folder ba
 
 - Python 3.6 or higher
 - [Pillow](https://python-pillow.org/) (for image processing)
+- tqdm (for progress bar)
 
 ## Installation
 
