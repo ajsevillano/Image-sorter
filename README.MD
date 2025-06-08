@@ -1,10 +1,11 @@
-# Image Sorter
+# Copy Images by Type
 
-A simple Python script to sort images into colour and black & white categories. This script scans a specified directory for image files and copies them into separate folders based on their colour type.
+This Python script copies images from a source folder to a destination folder based on their type: **black and white** (BW) or **colour**. It supports common image formats such as `.jpg`, `.jpeg`, and `.png`.
 
-# User case
 
-A folder with a mix of colour and black & white images, and you want to organize them into two separate folders for better organization.
+
+
+
 
 # Features
 
@@ -15,7 +16,7 @@ A folder with a mix of colour and black & white images, and you want to organize
 ## Requirements
 
 - Python 3.6 or higher
-- Pillow library
+- [Pillow](https://python-pillow.org/) (for image processing)
 
 ## Installation
 
@@ -32,15 +33,28 @@ A folder with a mix of colour and black & white images, and you want to organize
 
 ## Usage
 
-1. Edit the configuration in both scripts:
-   - Set the `source` path to the directory containing your images
-   - Set the `destination` path to the directory where you want the sorted images to be stored.
+Run the script with the appropriate arguments:
+  ```python
+  python images_sorter.py --source <source_folder> --destination <destination_folder> --type <bw|colour>
+```
 
-2. To copy colour images from the source folder to the destination folder, run:
-   ```
-   python copy_colour_pictures.py
-   ```
-3. To copy black and white images from the source folder to the destination folder, run:
-   ```
-   python copy_bw_pictures.py
-   ```
+## Use Case
+
+Imagine you have a folder with hundreds of photos, where each image has both a **colour version** and a **black and white version**, all mixed together in the same directory. Manually sorting them would be time-consuming and error-prone.
+
+With this script, you can automatically separate the two types into different folders
+
+## Examples
+
+Copy black and white images:
+  ```python
+  python images_sorter.py --source ./images --destination ./sorted_images --type bw
+  ```
+
+Copy colour images:
+  ```python
+  python images_sorter.py --source ./images --destination ./sorted_images --type colour
+  ```
+
+## License
+This script is open source and free to use for personal or commercial purposes.
